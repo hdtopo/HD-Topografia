@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dados e Projetos | HD Topografia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+    }
+
+    header { padding: 20px 15px 30px; text-align: center; }
+    .menu {
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .menu a {
+      display: block;
+      padding: 14px 10px;
+      border-radius: 999px;
+      border: 3px solid #444444;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.22);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding: 0 15px 40px;
+    }
+
+    .secao-titulo {
+      margin-top: 40px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .secao-titulo h2 {
+      font-size: 34px;
+      letter-spacing: 4px;
+      color: #6a9ecf;
+      font-weight: 400;
+    }
+    .secao-titulo .barra {
+      margin: 10px auto 0;
+      width: 80px;
+      height: 4px;
+      background: #6a9ecf;
+      border-radius: 4px;
+    }
+
+    .grid-projetos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card-projeto {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .card-projeto img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-projeto .conteudo {
+      padding: 15px 18px 18px;
+    }
+
+    .card-projeto h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+
+    .card-projeto p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .card-projeto a {
+      font-size: 14px;
+      color: #337ab7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 15px 30px;
+      font-size: 14px;
+      color: #777777;
+      border-top: 1px solid #eeeeee;
+    }
+
+    @media (max-width: 480px) {
+      .menu a { font-size: 16px; padding: 12px 8px; }
+      .secao-titulo h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="menu">
+      <a href="index.html">HD Topografia</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#locacao">Locação Estação Total</a>
+      <a href="dados.html">Projetos</a>
+      <a href="https://www.youtube.com/seu-canal" target="_blank">Vídeos</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="secao-titulo">
+        <h2>PROJETOS</h2>
+        <div class="barra"></div>
+      </div>
+
+      <div class="grid-projetos">
+        <!-- Card 1 -->
+        <article class="card-projeto">
+          <img src="imagens/projeto1.jpg" alt="Projeto 1">
+          <div class="conteudo">
+            <h3>Residencial Jardim das Acácias</h3>
+            <p>
+              Levantamento planialtimétrico e locação de obras em loteamento
+              residencial em Belo Horizonte – MG.
+            </p>
+            <a href="pdfs/projeto1.pdf" target="_blank">Ver planta completa</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card-projeto">
+          <img src="imagens/projeto2.jpg" alt="Projeto 2">
+          <div class="conteudo">
+            <h3>Centro Comercial Vila Nova</h3>
+            <p>
+              Locação de fundações, eixos e conferência de níveis para centro
+              comercial.
+            </p>
+            <a href="pdfs/projeto2.pdf" target="_blank">Ver planta completa</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card-projeto">
+          <img src="imagens/projeto3.jpg" alt="Projeto 3">
+          <div class="conteudo">
+            <h3>Condomínio Alto das Serras</h3>
+            <p>
+              Estudos de terraplenagem e implantação de vias internas.
+            </p>
+            <a href="pdfs/projeto3.pdf" target="_blank">Ver planta completa</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 HD Topografia – Projetos e dados técnicos.
+  </footer>
+</body>
+</html>

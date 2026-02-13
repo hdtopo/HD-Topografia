@@ -1,1 +1,203 @@
-<!DOCTYPE html><html><head><title>HD Topografia - Início</title><link rel='stylesheet' href='css/style.css'></head><body><h1>Bem-vindo à HD Topografia</h1><nav><a href='servicos.html'>Serviços</a> | <a href='projetos.html'>Projetos</a> | <a href='locacao.html'>Locação</a> | <a href='videos.html'>Vídeos</a> | <a href='contato.html'>Contato</a></nav><footer><p>© 2025 HD Topografia</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa | HD Topografia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+    }
+
+    /* Área do topo */
+    header {
+      padding: 20px 15px 40px;
+      text-align: center;
+    }
+
+    .menu {
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 14px 10px;
+      border-radius: 999px;
+      border: 3px solid #444444;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.22);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .menu a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    /* Conteúdo principal */
+    main {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 15px 40px;
+    }
+
+    .secao-titulo {
+      margin-top: 40px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .secao-titulo h2 {
+      font-size: 34px;
+      letter-spacing: 4px;
+      color: #6a9ecf; /* azul parecido com a imagem */
+      font-weight: 400;
+    }
+
+    .secao-titulo .barra {
+      margin: 10px auto 0;
+      width: 80px;
+      height: 4px;
+      background: #6a9ecf;
+      border-radius: 4px;
+    }
+
+    /* Área do mapa (exemplo com iframe) */
+    .mapa-wrapper {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+      margin-bottom: 30px;
+    }
+
+    .mapa-wrapper iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    /* Imagem de projeto ou planta */
+    .imagem-projeto {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Texto abaixo do mapa */
+    .texto-descricao {
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 15px 30px;
+      font-size: 14px;
+      color: #777777;
+      border-top: 1px solid #eeeeee;
+    }
+
+    @media (max-width: 480px) {
+      .menu a { font-size: 16px; padding: 12px 8px; }
+      .secao-titulo h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="menu">
+      <a href="index.html">HD Topografia</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#locacao">Locação Estação Total</a>
+      <a href="dados.html">Projetos</a>
+      <a href="https://www.youtube.com/seu-canal" target="_blank">Vídeos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Título seção mapa -->
+    <section id="mapa">
+      <div class="secao-titulo">
+        <h2>MAPA</h2>
+        <div class="barra"></div>
+      </div>
+
+      <div class="mapa-wrapper">
+        <!-- Substitua o src pelo iframe do Google Maps do seu endereço -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.2700!2d-43.9400!3d-19.9200"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p class="texto-descricao">
+        Aqui você pode descrever a localização, acesso à obra, referências próximas e
+        qualquer outra informação importante sobre o **mapa** e a área de atuação.
+      </p>
+    </section>
+
+    <!-- Seção serviços (exemplo de texto) -->
+    <section id="servicos">
+      <div class="secao-titulo">
+        <h2>SERVIÇOS</h2>
+        <div class="barra"></div>
+      </div>
+      <p class="texto-descricao">
+        Liste aqui seus principais serviços de topografia, locação de obras, acompanhamento
+        de terraplenagem, levantamentos planialtimétricos, entre outros.
+      </p>
+    </section>
+
+    <!-- Seção locação -->
+    <section id="locacao">
+      <div class="secao-titulo">
+        <h2>LOCAÇÃO ESTAÇÃO TOTAL</h2>
+        <div class="barra"></div>
+      </div>
+      <p class="texto-descricao">
+        Explique sua metodologia de locação, tipos de obras atendidas e diferenciais
+        técnicos.
+      </p>
+    </section>
+
+    <!-- Seção contato -->
+    <section id="contato">
+      <div class="secao-titulo">
+        <h2>CONTATO</h2>
+        <div class="barra"></div>
+      </div>
+      <p class="texto-descricao">
+        WhatsApp: (31) 9 9999-9999<br>
+        E-mail: contato@suaempresa.com<br>
+        Belo Horizonte – MG.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 HD Topografia – Todos os direitos reservados.
+  </footer>
+</body>
+</html>
