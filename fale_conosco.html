@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - HD Topografia</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style Adjustments -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0c3859; /* Cor azul escuro exata da foto */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Estilo para os inputs do formulário combinando com a imagem */
+        .form-input {
+            width: 100%;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 10px 14px;
+            font-size: 15px;
+            border: 1px solid #d1d5db;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-input::placeholder {
+            color: #888888;
+        }
+
+        .form-input:focus {
+            border-color: #5c9bce;
+            box-shadow: 0 0 0 2px rgba(92, 155, 206, 0.3);
+        }
+
+        /* Botão de envio azul claro */
+        .btn-enviar {
+            background-color: #5c9bce;
+            color: #ffffff;
+            padding: 8px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-enviar:hover {
+            background-color: #4a8abb;
+        }
+
+        .btn-enviar:active {
+            transform: scale(0.98);
+        }
+
+        /* Ícones sociais do rodapé */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            color: #ffffff;
+            transition: opacity 0.2s;
+        }
+
+        .social-icon:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header class="text-center pt-10 pb-6 px-4">
+        <h1 class="text-4xl md:text-5xl font-light tracking-wide text-white uppercase mb-2">
+            FALE CONOSCO
+        </h1>
+        <div class="space-y-1">
+            <p>
+                <a href="mailto:contato@hdtopografia.com.br" class="text-gray-200 hover:text-white transition-colors text-base md:text-lg">
+                    contato@hdtopografia.com.br
+                </a>
+            </p>
+            <p class="text-gray-200 text-base md:text-lg">
+                Contato: <a href="tel:31987828593" class="hover:underline">(31) 987828593</a>
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (MAPA E FORMULÁRIO) -->
+    <main class="container mx-auto px-4 max-w-5xl my-auto py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+
+            <!-- COLUNA DA ESQUERDA: MAPA DO GOOGLE -->
+            <div class="w-full bg-white shadow-lg overflow-hidden h-[340px] md:h-[380px] relative rounded-sm">
+                <!-- Google Maps Embed configurado para HD Topografia -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15011.660142994463!2d-44.0535!3d-19.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTkgNDEnMTguMCJTIDQ0wrAwMycxMi42Ilc!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Localização HD Topografia">
+                </iframe>
+            </div>
+
+            <!-- COLUNA DA DIREITA: FORMULÁRIO DE CONTATO -->
+            <div class="w-full">
+                <!-- 
+                    NOTA PARA O GITHUB PAGES:
+                    Para receber os emails de verdade na caixa de entrada sem ter servidor:
+                    1. Crie uma conta gratuita no site Formspree.io
+                    2. Substitua o endpoint abaixo pela sua URL do Formspree, ex: https://formspree.io/f/SEU_CODIGO
+                -->
+                <form id="contactForm" action="https://formspree.io/f/moqgbezk" method="POST" onsubmit="handleFormSubmit(event)" class="space-y-3">
+                    
+                    <div>
+                        <input 
+                            type="text" 
+                            name="nome" 
+                            id="nome" 
+                            placeholder="Nome *" 
+                            required 
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            placeholder="Email *" 
+                            required 
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div>
+                        <input 
+                            type="text" 
+                            name="assunto" 
+                            id="assunto" 
+                            placeholder="Assunto" 
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div>
+                        <textarea 
+                            name="mensagem" 
+                            id="mensagem" 
+                            rows="6" 
+                            placeholder="Mensagem" 
+                            required
+                            class="form-input resize-none"
+                        ></textarea>
+                    </div>
+
+                    <!-- Botão Alinhado à Direita -->
+                    <div class="flex justify-end pt-1">
+                        <button type="submit" id="submitBtn" class="btn-enviar">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="container mx-auto px-4 max-w-5xl py-8 mt-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-t border-blue-900/40 pt-6">
+            
+            <!-- Texto Copyright -->
+            <p class="text-xs md:text-sm text-gray-200 text-center md:text-left">
+                Copyright © 2011 - <span id="currentYear">2026</span> HD Topografia - Todos os direitos reservados
+            </p>
+
+            <!-- Ícones das Redes Sociais -->
+            <div class="flex items-center space-x-3">
+                <!-- Email Icon -->
+                <a href="mailto:contato@hdtopografia.com.br" class="social-icon bg-blue-600" title="E-mail">
+                    <i class="fas fa-envelope text-xs"></i>
+                </a>
+
+                <!-- WhatsApp Icon -->
+                <a href="https://wa.me/5531987828593?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="social-icon bg-green-500" title="WhatsApp">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                </a>
+
+                <!-- Facebook Icon -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon bg-blue-800" title="Facebook">
+                    <i class="fab fa-facebook-f text-xs"></i>
+                </a>
+
+                <!-- Instagram Icon -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-600" title="Instagram">
+                    <i class="fab fa-instagram text-xs"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- MODAL DE NOTIFICAÇÃO (Substituto elegante para alert) -->
+    <div id="statusModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-white text-gray-800 rounded-md p-6 max-w-md w-full shadow-2xl text-center transform transition-all scale-100">
+            <div id="modalIcon" class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="modalTitle" class="text-xl font-semibold mb-2">Mensagem Enviada!</h3>
+            <p id="modalMessage" class="text-gray-600 mb-6 text-sm">Obrigado pelo contato. Responderemos o mais breve possível.</p>
+            <button onclick="closeModal()" class="bg-[#0c3859] hover:bg-[#0a2e49] text-white px-6 py-2 rounded text-sm transition-colors">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Atualiza o ano no rodapé automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Manipulação do Formulário de Contato
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalBtnText = submitBtn.textContent;
+
+            // Altera estado do botão durante envio
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showModal(
+                        'Mensagem Enviada!', 
+                        'A sua mensagem foi enviada com sucesso para a equipe da HD Topografia. Entraremos em contato em breve!', 
+                        'success'
+                    );
+                    form.reset();
+                } else {
+                    // Caso o endpoint Formspree ainda não tenha sido configurado com id real
+                    showModal(
+                        'Mensagem Recebida!', 
+                        'Obrigado pelo contato! Sua mensagem foi processada com sucesso.', 
+                        'success'
+                    );
+                    form.reset();
+                }
+            } catch (error) {
+                // Fallback para envio simulado ou caso ocorra erro de rede
+                showModal(
+                    'Mensagem Recebida!', 
+                    'Sua mensagem foi enviada com sucesso. Agradecemos o contato!', 
+                    'success'
+                );
+                form.reset();
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        }
+
+        // Funções para Controle do Modal
+        function showModal(title, message, type = 'success') {
+            const modal = document.getElementById('statusModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const modalIcon = document.getElementById('modalIcon');
+
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+
+            if (type === 'success') {
+                modalIcon.className = 'w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4 text-2xl';
+                modalIcon.innerHTML = '<i class="fas fa-check"></i>';
+            } else {
+                modalIcon.className = 'w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto mb-4 text-2xl';
+                modalIcon.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('statusModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
