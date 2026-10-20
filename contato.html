@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - HD Topografia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="menu-container">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">HD Topografia</a></li>
+        <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+        <li class="nav-item"><a href="locacao.html" class="nav-link">Locação Estação Total</a></li>
+        <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+        <li class="nav-item"><a href="contato.html" class="nav-link active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="hero-title">Entre em Contato</h1>
+    <p class="hero-subtitle">Solicite um Orçamento sem Compromisso</p>
+
+    <div class="content-box" style="max-width: 600px; margin: 0 auto;">
+      
+      <!-- Mensagens de confirmação e erro do Formspree -->
+      <div data-fs-success style="display: none; color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 6px; margin-bottom: 20px; font-weight: 600; text-align: center;">
+        ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
+      </div>
+      
+      <div data-fs-error style="display: none; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 15px; border-radius: 6px; margin-bottom: 20px; text-align: center;">
+        ✕ Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.
+      </div>
+
+      <!-- Formulário Integrado ao Formspree -->
+      <form id="hd-contato-form">
+        
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required data-fs-field>
+          <span data-fs-error="nome" style="color: #721c24; font-size: 12px; display: block; margin-top: 4px;"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">E-mail de Contato</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required data-fs-field>
+          <span data-fs-error="email" style="color: #721c24; font-size: 12px; display: block; margin-top: 4px;"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999" required data-fs-field>
+          <span data-fs-error="telefone" style="color: #721c24; font-size: 12px; display: block; margin-top: 4px;"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem / Detalhes do Serviço</label>
+          <textarea id="mensagem" name="message" rows="5" placeholder="Descreva o serviço que você precisa..." required data-fs-field></textarea>
+          <span data-fs-error="message" style="color: #721c24; font-size: 12px; display: block; margin-top: 4px;"></span>
+        </div>
+
+        <button type="submit" class="btn-submit" data-fs-submit-btn>Enviar Mensagem</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Script oficial Formspree AJAX -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#hd-contato-form', formId: 'mgaobykz' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
