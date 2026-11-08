@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos - HD Topografia</title>
+  
+  <!-- Estilos gerais do site -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome para os ícones do rodapé -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+  <!-- NAVEGAÇÃO / MENU -->
   <header>
     <nav class="menu-container">
       <ul class="nav-menu">
@@ -21,25 +27,110 @@
     </nav>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL DA PÁGINA DE PROJETOS -->
   <main class="container">
-    <h1 class="hero-title">Portfólio de Projetos</h1>
-    <p class="hero-subtitle">Conheça Alguns dos Nossos Trabalhos Realizados</p>
+    
+    <!-- Cabeçalho da Seção de Projetos -->
+    <div class="projects-header">
+      <h1 class="projects-title">PROJETOS</h1>
+      <div class="projects-title-bar"></div>
+    </div>
 
-    <div class="grid-cards">
-      <div class="card">
-        <h3>Loteamento Residencial</h3>
-        <p>Demarcação de mais de 300 lotes com precisão milimétrica.</p>
+    <!-- Lista de Projetos -->
+    <div class="projects-list">
+      
+      <!-- Projeto 1: Levantamento Topográfico -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/800x450/e2e8f0/334155?text=Levantamento+Topográfico" alt="Levantamento Topográfico">
+        </div>
+        <div class="project-content">
+          <h2 class="project-item-title">Levantamento Topográfico</h2>
+          <p>
+            O levantamento topográfico consiste na representação - planimétrica ou planialtimétrica - de um terreno ou seja, modelo digital "planta" do relevo do terreno, e suas características como, acidentes geográficos, curvas de níveis, edificações caso exista, divisas, áreas, arvores, detalhamento geral do terreno.
+          </p>
+        </div>
+      </article>
+
+      <!-- Projeto 2: Locação de Obras -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/800x450/e2e8f0/334155?text=Locação+de+Obras" alt="Locação de obras Publicas e Privadas">
+        </div>
+        <div class="project-content">
+          <h2 class="project-item-title">Locação de obras Publicas e Privadas</h2>
+          <p>
+            A locação da obra é o processo de transferência da planta baixa do projeto para o terreno, ou seja, as edificações, os afastamentos, as redes esgoto e drenagens, também é possível locar, jardins, quadras, etc. Na fase de execução da locação da obra deve se adotar o máximo rigor possível, com isso vai garantir uma copia fiel do projeto criado pelo projetista.
+          </p>
+        </div>
+      </article>
+
+      <!-- Projeto 3: Levantamento Aéreo com Drone -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/800x450/e2e8f0/334155?text=Levantamento+Aéreo+com+Drone" alt="Levantamento Aéreo com Drone">
+        </div>
+        <div class="project-content">
+          <h2 class="project-item-title">Levantamento Aéreo com Drone</h2>
+          <p>
+            No caso da topografia com drones, ou melhor, aerofotogrametria com drones. O conceito define como: “a ciência que captura informações de objetos em solo sem contato direto entre este e o sensor”, ou seja, você não precisa percorrer o terreno para capturar informações, podendo realizar isso de forma remota, também conhecido como sensoriamento remoto.
+          </p>
+        </div>
+      </article>
+
+      <!-- Projeto 4: Avaliação de Peças -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/800x450/e2e8f0/334155?text=Avaliação+de+Peças+Industriais" alt="Avaliação de Peças">
+        </div>
+        <div class="project-content">
+          <h2 class="project-item-title">AVALIAÇÃO DE PEÇAS</h2>
+          <p>
+            Avaliação topográfica de peças industriais para verificar o grau de distorção, isto se resume em um micro levantamento de áreas, com uma densa nuvem de pontos, capazes de mostrar graficamente e quantitativamente o grau de distorção de cada equipamento.
+          </p>
+          <p>
+            O trabalho consiste em buscar áreas afetadas da peça, quer sofrerão esforço mecânico, altas temperaturas, desgastes, deformação, a HD Topografia de maneira exemplar faz o inventario e apresenta Laudo Técnico de cada componente, especificando a real situação da peça.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ COMPLETO -->
+  <footer class="site-footer">
+    <div class="footer-quote-container">
+      <div class="footer-quote-box">
+        " Topografia, sem dúvida parte fundamental da obra. "
       </div>
-      <div class="card">
-        <h3>Mapeamento Rodoviário</h3>
-        <p>Levantamento planialtimétrico para duplicação de rodovia.</p>
-      </div>
-      <div class="card">
-        <h3>Terraplenagem Industrial</h3>
-        <p>Cálculo de volume de corte e aterro para galpão logístico.</p>
+      <div class="quote-arrow"></div>
+    </div>
+
+    <div class="footer-info">
+      <p class="phone">(31) 987828593</p>
+      <p class="email"><a href="mailto:contato@hdtopografia.com.br">contato@hdtopografia.com.br</a></p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          Copyright &copy; 2011 - <span id="current-year"></span> HD Topografia - Todos os direitos reservados
+        </p>
+
+        <div class="social-icons">
+          <a href="mailto:contato@hdtopografia.com.br" title="E-mail" class="social-icon email-icon"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/5531987828593" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="social-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-  </main>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
