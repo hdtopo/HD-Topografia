@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vídeos - HD Topografia</title>
+  
+  <!-- Estilos gerais do site -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome para os ícones de player, download e redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+  <!-- NAVEGAÇÃO / MENU -->
   <header>
     <nav class="menu-container">
       <ul class="nav-menu">
@@ -21,14 +27,147 @@
     </nav>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL DA PÁGINA DE VÍDEOS -->
   <main class="container">
-    <h1 class="hero-title">Galeria de Vídeos</h1>
-    <p class="hero-subtitle">Demonstrações em Campo e Tutoriais</p>
-
-    <div class="content-box" style="text-align: center;">
-      <p>Em breve disponibilizaremos vídeos mostrando nossa equipe em ação e tutoriais sobre equipamentos topográficos.</p>
+    
+    <!-- Cabeçalho da Seção de Vídeos (Igual à Foto) -->
+    <div class="videos-header">
+      <h1 class="videos-title">Videos</h1>
+      <div class="videos-title-bar"></div>
+      
+      <p class="videos-intro">
+        Espaço do conhecimento, aqui serão publicados videos relacionados a dificuldades encontradas nas diversas atividades da topografia.<br>
+        O Espaço conhecimento esta aberto a conhecimentos e métodos inovadores que podem nos ajudar em variados casos.
+      </p>
     </div>
+
+    <!-- Grade de Vídeos -->
+    <div class="videos-grid">
+      
+      <!-- Vídeo 1 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://via.placeholder.com/400x230/e2e8f0/334155?text=Nuvem+de+Pontos+Drone" alt="Nuvem de pontos de Drone no topoGRAPH">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="play-overlay" title="Assistir Vídeo">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">Nuvem de pontos de Drone no topoGRAPH</h3>
+        </div>
+      </div>
+
+      <!-- Vídeo 2 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://via.placeholder.com/400x230/e2e8f0/334155?text=Importando+Seções+AutoCAD" alt="Importando Seções AutoCAD para topoGRAPH">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="play-overlay" title="Assistir Vídeo">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">Importando Seções AutoCAD para topoGRAPH</h3>
+        </div>
+      </div>
+
+      <!-- Vídeo 3 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://via.placeholder.com/400x230/e2e8f0/334155?text=Sanding+STS+Coordenadas" alt="Descarregando Sanding STS por Coordenadas">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="play-overlay" title="Assistir Vídeo">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">Descarregando Sanding STS por Coordenadas</h3>
+          <a href="#" class="btn-download-material" title="Baixar Material Suporte">
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Vídeo 4 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://via.placeholder.com/400x230/e2e8f0/334155?text=Seções+AutoCAD+DEMO" alt="Importando Seções AutoCAD para topoGRAPH DEMO">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="play-overlay" title="Assistir Vídeo">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">Importando Seções AutoCAD para topoGRAPH "DEMO"</h3>
+          <a href="#" class="btn-download-material" title="Baixar Material Suporte">
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Vídeo 5 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://via.placeholder.com/400x230/e2e8f0/334155?text=Coordenadas+AutoCAD" alt="Importando COORDENADAS AutoCAD para Planilha topoGRAPH">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="play-overlay" title="Assistir Vídeo">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">Importando COORDENADAS AutoCAD para Planilha topoGRAPH</h3>
+          <a href="#" class="btn-download-material" title="Baixar Material Suporte">
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Vídeo 6 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://via.placeholder.com/400x230/e2e8f0/334155?text=SIRGAS+2000" alt="CONFIGURANDO TOPOGRAPH - SIRGAS 2000">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="play-overlay" title="Assistir Vídeo">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3 class="video-card-title">CONFIGURANDO TOPOGRAPH - SIRGAS 2000</h3>
+        </div>
+      </div>
+
+    </div>
+
   </main>
+
+  <!-- RODAPÉ COMPLETO -->
+  <footer class="site-footer">
+    <div class="footer-quote-container">
+      <div class="footer-quote-box">
+        " Topografia, sem dúvida parte fundamental da obra. "
+      </div>
+      <div class="quote-arrow"></div>
+    </div>
+
+    <div class="footer-info">
+      <p class="phone">(31) 987828593</p>
+      <p class="email"><a href="mailto:contato@hdtopografia.com.br">contato@hdtopografia.com.br</a></p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          Copyright &copy; 2011 - <span id="current-year"></span> HD Topografia - Todos os direitos reservados
+        </p>
+
+        <div class="social-icons">
+          <a href="mailto:contato@hdtopografia.com.br" title="E-mail" class="social-icon email-icon"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/5531987828593" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="social-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
