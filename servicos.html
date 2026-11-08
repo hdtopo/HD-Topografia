@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços - HD Topografia</title>
+  
+  <!-- Estilos gerais do site -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome para os ícones do rodapé -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+  <!-- NAVEGAÇÃO / MENU -->
   <header>
     <nav class="menu-container">
       <ul class="nav-menu">
@@ -21,25 +27,94 @@
     </nav>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL DA PÁGINA DE SERVIÇOS -->
   <main class="container">
-    <h1 class="hero-title">Nossos Serviços</h1>
-    <p class="hero-subtitle">Soluções Completas em Agrimensura e Mapeamento</p>
+    
+    <!-- Cabeçalho da Seção de Serviços -->
+    <div class="services-header">
+      <h1 class="services-title">SERVIÇOS</h1>
+      <div class="services-title-bar"></div>
+    </div>
 
-    <div class="grid-cards">
-      <div class="card">
-        <h3>Levantamento Planialtimétrico</h3>
-        <p>Mapeamento detalhado do relevo e limites do seu terreno com alta precisão digital.</p>
+    <!-- Texto Institucional dos Serviços -->
+    <div class="services-intro-box">
+      <p>
+        A HD Topografia presta diversos serviços na área de topografia para a construção civil, montagens industriais e convencional, projetos topográficos, cartográficos, esgotamento sanitário e outros de engenharia.
+      </p>
+      <p>
+        A equipa de serviços da HD Topografia é formada por técnicos agrimensores, topógrafos e cadistas qualificados, dispondo de amparo técnico informatizado com equipamentos e softwares topográficos e CAD de alta precisão.
+      </p>
+      <p>
+        Os dados coletados pelas equipas de campo são processados e analisados em escritório por especialistas que garantem máxima precisão das informações. Todos os equipamentos utilizados são calibrados periodicamente, assegurando o rigor exigido pelo mercado.
+      </p>
+    </div>
+
+    <!-- Seção de Agendamento Online -->
+    <section class="booking-section">
+      <h2 class="booking-title">Faça um agendamento online!</h2>
+      <p class="booking-subtitle">Entramos em contato com você para sanar qualquer dúvida</p>
+
+      <!-- Grade dos Cards de Agendamento -->
+      <div class="booking-grid">
+        
+        <!-- Card 1: Informações sobre Serviços -->
+        <div class="booking-card">
+          <div class="booking-img-wrapper">
+            <img src="https://via.placeholder.com/300x300/e2e8f0/334155?text=Atendimento" alt="Informações sobre Serviços">
+          </div>
+          <h3 class="booking-card-title">Informações sobre Serviços</h3>
+          <span class="booking-duration">15 min</span>
+          <a href="contato.html" class="booking-btn">Agendar</a>
+        </div>
+
+        <!-- Card 2: Levantamento Topográfico -->
+        <div class="booking-card">
+          <div class="booking-img-wrapper">
+            <img src="https://via.placeholder.com/300x300/e2e8f0/334155?text=Estação+Total" alt="Levantamento Topográfico">
+          </div>
+          <h3 class="booking-card-title">Levantamento Topográfico</h3>
+          <span class="booking-duration">1 h</span>
+          <a href="contato.html" class="booking-btn">Agendar</a>
+        </div>
+
       </div>
-      <div class="card">
-        <h3>Acompanhamento de Obras</h3>
-        <p>Marcação de eixos, gabaritos, estaqueamento e controle geométrico de infraestrutura.</p>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ COMPLETO -->
+  <footer class="site-footer">
+    <div class="footer-quote-container">
+      <div class="footer-quote-box">
+        " Topografia, sem dúvida parte fundamental da obra. "
       </div>
-      <div class="card">
-        <h3>Georreferenciamento</h3>
-        <p>Regularização de imóveis rurais e urbanos conforme as normas do INCRA e cartórios.</p>
+      <div class="quote-arrow"></div>
+    </div>
+
+    <div class="footer-info">
+      <p class="phone">(31) 987828593</p>
+      <p class="email"><a href="mailto:contato@hdtopografia.com.br">contato@hdtopografia.com.br</a></p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          Copyright &copy; 2011 - <span id="current-year"></span> HD Topografia - Todos os direitos reservados
+        </p>
+
+        <div class="social-icons">
+          <a href="mailto:contato@hdtopografia.com.br" title="E-mail" class="social-icon email-icon"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/5531987828593" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="social-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-  </main>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
